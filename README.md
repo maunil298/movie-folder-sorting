@@ -1,5 +1,5 @@
 # movie-folder-sorting
-it sorts the list of movie folders through imdb rating and year through omdb api
+it sorts the list of movie folders as imdb rating, title and year through omdb api
 
 
 # requirements
@@ -9,8 +9,8 @@ it sorts the list of movie folders through imdb rating and year through omdb api
 
 # How to use
 
-you must have an omdb api key. you can get one from here http://www.omdbapi.com/apikey.aspx
+- you must have an omdb api key. you can get one from here http://www.omdbapi.com/apikey.aspx
 
-paste main.py file in your movies folder
+- paste main.py file in your movies folder
 
-run the file and your folders will be sorted if they have proper names
+- run the file and your folders will be sorted if they have proper names
