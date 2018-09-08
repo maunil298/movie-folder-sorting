@@ -3,6 +3,7 @@ import requests
 import os
 import re
 
+clear = lambda: os.system('cls')
 #get all folder names in a list
 folderlist = os.listdir()
 
@@ -38,10 +39,15 @@ def rename(old_foldername,new_foldername):
 
 
 omdbkey = input ("Enter omdb api key : ")
+verifykey = "xyz"
+while verifykey != "7.2 - troy (2004)":
+	pass
+	omdbkey = input("!! Enter correct omdb api key : ")
+	verifykey = searchomdb("troy")
 
-print(" ")
-print("Old Folder Name".ljust(25,' ') + "Status".ljust(25,' ') + "Renamed to")
-print(" ")
+clear()
+print("\n\n" + "OLD FOLDER NAME".ljust(25,' ') + "STATUS".ljust(25,' ') + "RENAMED TO\n\n")
+
 for folder in folderlist:
 	oldname = folder
 	symbol_one = folder.count('[')
