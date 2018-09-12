@@ -18,7 +18,8 @@ def searchomdb(title):
 	try:
 		pass
 		#search for title
-		req = requests.get("http://www.omdbapi.com/?apikey=" + omdbkey +"&t=" + title)
+		params_dict = {'apikey':omdbkey,'t':title}
+		req = requests.get("http://www.omdbapi.com", params = params_dict)
 		
 		# store requested json to dictionary
 		req_dictionary = (req.json())
@@ -39,10 +40,11 @@ def rename(old_foldername,new_foldername):
 
 
 omdbkey = input ("Enter omdb api key : ")
-verifykey = "xyz"
+verifykey = searchomdb("troy")
+
 while verifykey != "7.2 - troy (2004)":
 	pass
-	omdbkey = input("!! Enter correct omdb api key : ")
+	omdbkey = input("Enter correct omdb api key..!!  : ")
 	verifykey = searchomdb("troy")
 
 clear()
